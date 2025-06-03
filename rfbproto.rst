@@ -4657,6 +4657,14 @@ the VMware Cursor Position pseudo-encoding. The *x-position* and
 *y-position* define the new position of the cursor hot spot (not the
 the top left corner of cursor image).
 
+Clients are expected to move the actual cursor position, not just change
+the cursor's visual rendering. Clients that are unable to override the
+cursor position should not advertise support for this pseudo-encoding.
+
+The forced change of the cursor position can be used to confine the
+cursor to a specific area, or to emulate relative cursor movement by
+constantly moving the cursor back to a specific position.
+
 VMware Key Repeat Pseudo-encoding
 ---------------------------------
 
